@@ -7,7 +7,8 @@
     "pages/view/shopCar/shopCar",
     "pages/view/get-system-info/get-system-info",
     "pages/view/notice-bar/notice-bar",
-    "pages/login/login"
+    "pages/view/login/login",
+    "pages/view/get-user-info/get-user-info"
   ],
   "subPackages": [],
   "window": {
@@ -48,5 +49,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

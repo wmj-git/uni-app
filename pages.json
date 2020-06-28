@@ -43,9 +43,15 @@
 			}
 		},
 		{
-			"path": "pages/login/login",
+			"path": "pages/view/login/login",
 			"style": {
-				"navigationBarTitleText": "登录"
+				"navigationBarTitleText": "授权登录"
+			}
+		},
+		{
+			"path": "pages/view/get-user-info/get-user-info",
+			"style": {
+				"navigationBarTitleText": "获取用户信息"
 			}
 		}
 	],

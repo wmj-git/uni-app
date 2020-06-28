@@ -5,6 +5,7 @@
 				<text class="uni-panel-text">{{item.name}}</text>
 				<text class="uni-panel-icon uni-icon">&#xe470;</text>
 			</view>
+			
 		</view>
 	</view>
 </template>
@@ -25,12 +26,20 @@
 				{
 					name: "公告",
 					url: "notice-bar"
+				},
+				{
+					name: "登录",
+					url: 'login'
+				},
+				{
+					name: '获取用户信息',
+					url: 'get-user-info'
 				}]
 			}
 		},
 		methods: {
 			goDetailPage(path) {
-				console.log(123, path);
+				console.log('path:', path);
 				if (this.navigateFlag) {
 					return;
 				}
