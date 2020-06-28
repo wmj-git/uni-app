@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/tabBar/home/home",
+    "pages/tabBar/contact/contact",
+    "pages/tabBar/other/other",
+    "pages/tabBar/mine/mine",
+    "pages/view/shopCar/shopCar",
+    "pages/view/get-system-info/get-system-info",
+    "pages/view/notice-bar/notice-bar",
+    "pages/login/login"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/home/home",
+        "iconPath": "static/component.png",
+        "selectedIconPath": "static/componentHL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabBar/contact/contact",
+        "iconPath": "static/api.png",
+        "selectedIconPath": "static/apiHL.png",
+        "text": "联系"
+      },
+      {
+        "pagePath": "pages/tabBar/other/other",
+        "iconPath": "static/api.png",
+        "selectedIconPath": "static/apiHL.png",
+        "text": "其他"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/mine",
+        "iconPath": "static/api.png",
+        "selectedIconPath": "static/apiHL.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,97 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabBar/home/home",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/tabBar/contact/contact",
+			"style": {
+				"navigationBarTitleText": "联系页面"
+			}
+		},
+		{
+			"path": "pages/tabBar/other/other",
+			"style": {
+				"navigationBarTitleText": "其他页面"
+			}
+		},
+		{
+			"path": "pages/tabBar/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的页面"
+			}
+		},
+		{
+			"path": "pages/view/shopCar/shopCar",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/view/get-system-info/get-system-info",
+			"style": {
+				"navigationBarTitleText": "获取手机系统信息"
+			}
+		},
+		{
+			"path": "pages/view/notice-bar/notice-bar",
+			"style": {
+				"navigationBarTitleText": "滚动公告"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/tabBar/home/home",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabBar/contact/contact",
+				"iconPath": "static/api.png",
+				"selectedIconPath": "static/apiHL.png",
+				"text": "联系"
+			},
+			{
+				"pagePath": "pages/tabBar/other/other",
+				"iconPath": "static/api.png",
+				"selectedIconPath": "static/apiHL.png",
+				"text": "其他"
+			},
+			{
+				"pagePath": "pages/tabBar/mine/mine",
+				"iconPath": "static/api.png",
+				"selectedIconPath": "static/apiHL.png",
+				"text": "我的"
+			}
+		]
+	}
+}

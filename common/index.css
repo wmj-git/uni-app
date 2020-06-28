@@ -1,0 +1,33 @@
+uni-image,
+uni-input,
+uni-scroll-view,
+uni-swiper,
+uni-swiper-item,
+uni-text,
+uni-textarea,
+uni-video,
+uni-view {
+	position: relative;
+	border: 0 solid #000;
+	box-sizing: border-box;
+}
+
+[nvue] uni-scroll-view,
+[nvue] uni-swiper-item,
+[nvue] uni-view {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	-webkit-box-flex: 0;
+	-webkit-flex-grow: 0;
+	flex-grow: 0;
+	-webkit-flex-basis: auto;
+	flex-basis: auto;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	-webkit-align-content: flex-start;
+	align-content: flex-start;
+}

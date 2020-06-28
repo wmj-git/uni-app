@@ -1,0 +1,18 @@
+
+.page.data-v-3d3a40f7{
+	padding: 15rpx;
+}
+.user.data-v-3d3a40f7 {
+	width: 100%;
+}
+.login.data-v-3d3a40f7 {
+	width: 200rpx;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.exit.data-v-3d3a40f7{
+	float: right;
+	margin-right: 20rpx;
+	color: #0A98D5;
+}
+
