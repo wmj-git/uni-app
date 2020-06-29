@@ -6,7 +6,7 @@
 					<image :src="imageSrc" class="image" mode="widthFix"></image>
 				</block>
 				<block v-else>
-					<view class="uni-hello-addfile" @click="chooseImage">+ 选择图片</view>
+					<button @click="upload">选择图片上传</button>
 				</block>
 			</view>
 		</view>
@@ -24,60 +24,30 @@
 			this.imageSrc = '';
 		},
 		methods: {
-			chooseImage: function() {
+			upload() {
+				let that = this;
 				uni.chooseImage({
-					count: 3,
-					sizeType: ['compressed'],
-					sourceType: ['album'],
-					success: (res) => {
-						console.log('chooseImage success, temp path is', res.tempFilePaths[0])
-						var imageSrc = res.tempFilePaths[0];
-						uni.uploadFile({
-							// 真机测试时提示uploadFile fail url not in domain list。是小程序没有配置上传域名导致。
-							url: 'https://unidemo.dcloud.net.cn/upload',
-							filePath: imageSrc,
-							fileType: 'image',
-							name: 'data',
-							success: (res) => {
-								console.log('uploadImage success, res is:', res)
-								uni.showToast({
-									title: '上传成功',
-									icon: 'success',
-									duration: 1000
-								})
-								this.imageSrc = imageSrc
-							},
-							fail: (err) => {
-								console.log('uploadImage fail', err);
-								uni.showModal({
-									content: err.errMsg,
-									showCancel: false
-								});
-							}
-						});
-					},
-					fail: (err) => {
-						console.log('chooseImage fail', err)
-						// #ifdef MP
-						uni.getSetting({
-							success: (res) => {
-								let authStatus = res.authSetting['scope.album'];
-								if (!authStatus) {
-									uni.showModal({
-										title: '授权失败',
-										content: 'Hello uni-app需要从您的相册获取图片，请在设置界面打开相关权限',
-										success: (res) => {
-											if (res.confirm) {
-												uni.openSetting()
-											}
-										}
-									})
-								}
-							}
-						})
-						// #endif
+					count: 6, //默认9
+					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+					sourceType: ['album'], //从相册选择
+					success: function(res) {
+						console.log(res);
+
+						that.$http
+							.upload('/api/upload/img', {
+								filePath: res.tempFilePaths[0],
+								name: 'file'
+							})
+							.then(res => {
+								console.log('全局http 上传 get success----');
+								console.log(res);
+							})
+							.catch(err => {
+								console.log('全局http 上传 fail----');
+								console.log(err);
+							});
 					}
-				})
+				});
 			}
 		}
 	}
